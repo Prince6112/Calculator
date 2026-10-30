@@ -8,15 +8,14 @@ Open `index.html` in any modern web browser.
 
 ## Features
 
-- Digit entry (0–9)
+- Digit entry (0–9) and decimal numbers
 - Addition, subtraction, multiplication, and division
 - `=` to evaluate the current expression
 - `AC` to clear everything
 
 ## Known limitations
 
-- The decimal point (`.`) and percentage (`%`) buttons are present in the UI but not yet wired up.
-- Calculations use `parseInt`, so results are based on whole numbers only.
+- The percentage (`%`) button is present in the UI but not yet wired up.
 
 ## Project structure
 

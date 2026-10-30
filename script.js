@@ -28,6 +28,20 @@ const inputNumber=(number)=>{
     }
 }
 
+const decimal=document.querySelector('.decimal')
+
+decimal.addEventListener('click',(event)=>{
+    inputDecimal(event.target.value)
+    updateScreen(currentInput)
+})
+
+const inputDecimal=(dot)=>{
+    if(currentInput.includes('.')){
+        return
+    }
+    currentInput+=dot
+}
+
 const operators=document.querySelectorAll(".operator")
 
 operators.forEach((operator)=>{
@@ -54,16 +68,16 @@ const calculate=()=>{
     let result=0
     switch(calculationOperator){
         case '+':
-            result=parseInt(prevInput)+parseInt(currentInput)
+            result=parseFloat(prevInput)+parseFloat(currentInput)
             break
         case '-':
-            result=parseInt(prevInput)-parseInt(currentInput)
+            result=parseFloat(prevInput)-parseFloat(currentInput)
             break
         case '*':
-            result=parseInt(prevInput)*parseInt(currentInput)
+            result=parseFloat(prevInput)*parseFloat(currentInput)
             break
         case '/':
-            result=parseInt(prevInput)/parseInt(currentInput)
+            result=parseFloat(prevInput)/parseFloat(currentInput)
             break
         default:
             return
